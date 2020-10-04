@@ -32,7 +32,7 @@ public class GradebookHashMap {
                 in.nextLine();
             }
 
-        } while(!newStudent.equals(""));
+        } while (!newStudent.equals(""));
 
         // Print class roster
         System.out.println("\nClass roster:");
@@ -46,5 +46,5 @@ public class GradebookHashMap {
         double avg = sum / students.size();
         System.out.println("Average grade: " + avg);
     }
-
 }
+

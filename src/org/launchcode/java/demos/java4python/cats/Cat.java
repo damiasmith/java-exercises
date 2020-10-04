@@ -1,5 +1,7 @@
 package org.launchcode.java.demos.java4python.cats;
 
+import java.util.Objects;
+
 /**
  * Created by LaunchCode
  */
@@ -45,5 +47,19 @@ public class Cat {
         System.out.println("After eating, tom still says: " + tom.noise());
         tom.eat();
         System.out.println("After eating again, tom says: " + tom.noise());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cat cat = (Cat) o;
+        return tired == cat.tired &&
+                hungry == cat.hungry;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(tired, hungry);
     }
 }
